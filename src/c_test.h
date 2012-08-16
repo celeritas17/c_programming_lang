@@ -110,7 +110,7 @@ int lower(int c){
 	return (c >= 'A' && c <= 'Z') ? c + 'a' - 'A': c; 
 }
 
-/* binsearch1: example from chapter 3 in "C Programming Language"; two tests inside while loop. Measures running time */
+/* binsearch1: from chapter 3 in "C Programming Language"; two tests inside while loop. */
 int binsearch1(int x, int* v, int length){
 	
 	int low, mid, high;
@@ -129,7 +129,7 @@ int binsearch1(int x, int* v, int length){
 	return -1;   /* no match */
 }
 
-/* Binary search for an element of a sorted array. Exercise 3-1 in "C Programming Language", by the way. */
+/* Binary search for an element of a sorted array. Exercise 3-1 in "C Programming Language." */
 int binsearch(long x, int* v, int length){
 	
 	int low, mid, high;
