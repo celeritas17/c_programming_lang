@@ -23,7 +23,7 @@ char *squeeze(const char *s1, const char *s2){
 	int i, j;
 
 	for (i = 0; s1[i] != '\0'; i++) // Determine max possible length of 
-		;															// squeezed string
+		;		 	// squeezed string
 	s = (char *)malloc(i); // Allocate space for return string
 
 	for (i = 0; i < CHAR_RANGE; i++)
