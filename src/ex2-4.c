@@ -12,7 +12,6 @@ int main(int argc, char *argv[]){
 	}
 
 	printf("\"%s\" squeezed with \"%s\" is \"%s\"\n", argv[1], argv[2], squeeze(argv[1], argv[2]));	
-	//printf("\"%s\" squeezed with \"%s\" is \"%s\"\n", "Fuck", "Shit", squeeze("Fuck", "Shit"));
 
 	return 0;
 }
