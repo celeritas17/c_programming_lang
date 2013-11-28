@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <ctype.h>
+
+#define BASE 16
 
 int htoi(char s[]);
 
@@ -34,7 +37,7 @@ int htoi(char s[]){
 		digit = (s[i] <= '9' && s[i] >= '0') ? (s[i] - '0') 
 			: ((s[i] <= 'f' && s[i] >= 'a') ? (9 + s[i] - 'a' + 1) 
 				: (9 + s[i] - 'A' + 1)); 
-		term = 16*digit*term/last_digit;
+		term = BASE*digit*term/last_digit;
 		result += term;
 		i--;
 	}
