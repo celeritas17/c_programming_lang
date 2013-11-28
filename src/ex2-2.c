@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[]){
-	int lim, i;;
+	int lim, i;
 	char c;
 	i = 0;
 	lim = 10;
