@@ -13,7 +13,10 @@ int main(int argc, char *argv[]){
 		exit(1);
 	}
 
-	((spot = any(argv[1], argv[2])) != -1) ? printf("The first char from \"%s\" that occurs in \"%s\" is \'%c\' at position %d\n", argv[1], argv[2], argv[1][spot], spot) : printf("No char from \"%s\" occurs in \"%s\"\n",argv[2], argv[1]);
+	((spot = any(argv[1], argv[2])) != -1) ? printf("The first char from \"%s\" that occurs in \"%s\" is \'%c\' at position %d\n", 
+		argv[1], argv[2], argv[1][spot], spot) 
+		: printf("No char from \"%s\" occurs in \"%s\"\n",
+			argv[2], argv[1]);
 	return 0;
 }
 
