@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define CHAR_RANGE 128 //ascii printing chars are between 0 and 127
+#define CHAR_RANGE 128 //ascii printable chars are between 0 and 127
 
 char *squeeze(const char *, const char *);
 
