@@ -33,7 +33,7 @@ int any(const char *s1, const char *s2){
 		char_array[i] = 0;	 // char_array
 					 
 	for (i = 0; s2[i] != '\0'; i++)  // flag occurrences of s2[i]
-		char_array[s2[i]]++;     // in char_array
+		char_array[s2[i]]++;     
 	
 	for (i = 0; s1[i] != '\0'; i++){
 		if (char_array[s1[i]])   // if s1[i] was found in s2
