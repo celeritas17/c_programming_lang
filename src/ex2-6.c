@@ -33,7 +33,7 @@ unsigned int setbits(const unsigned int x, const int p, const int n, const unsig
 	
 	for (i = 0; i < p - n + 1; i++)
 		kill_mask = (kill_mask << 1) | 1; // kill_mask will have 0s for the bits 
-	  																	// to kill in x, 1s everywhere else.
+						  // to kill in x, 1s everywhere else.
 	
 	return (x & kill_mask) | new_bits; // & kills the bits to replace in x;
 	                                   // | sets bits from new_bits
