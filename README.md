@@ -7,6 +7,6 @@ To compile program for a specific exercises, navigate to the folder with desired
 	cc -o binary-name source-file  
 	./binary-name 
 
-where "binary-name" is the name for choose for the binary file, "source-file" is the program for the desired exercise.
+where "binary-name" is the name you choose for the binary file, "source-file" is the program for the desired exercise.
 
 
