@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
 unsigned int getbits(const unsigned int, const int, const int);
 unsigned int rightrot(const unsigned int, const int);
