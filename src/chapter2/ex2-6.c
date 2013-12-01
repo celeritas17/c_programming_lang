@@ -25,9 +25,9 @@ unsigned int setbits(const unsigned int x, const int p, const int n, const unsig
 	unsigned int i, new_bits, kill_mask = ~0; 
 	new_bits = getbits(y, n - 1, n); // get bits to set from y.
 	
-	new_bits = new_bits << (p - n + 1); // shift new bits into correct position.
+	new_bits <<= (p - n + 1); // shift new bits into correct position.
 	
-	kill_mask = (kill_mask << (p + 1)) | ((p > 0) ? (2*(p - n) + 1) : 0); // kill_mask will have 0s for the bits 
+	kill_mask = (kill_mask << (p + 1)) | ((p > 0) ? (2*(p + 1 - n) + 1) : 0); // kill_mask will have 0s for the bits 
 						                              // to kill in x, 1s everywhere else.
 	return (x & kill_mask) | new_bits; // & kills the bits to replace in x;
 	                                   // | sets bits from new_bits
