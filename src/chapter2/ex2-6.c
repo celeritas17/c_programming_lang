@@ -6,7 +6,7 @@ unsigned int setbits(const unsigned int, const int, const int, const unsigned in
 
 int main(int argc, char *argv[]){
 	if (argc < 5){
-		printf("Usage %s <int to setbits on> <start pos> <number of bits> <int to get bits from>\n", argv[0]);
+		printf("Usage: %s <int to setbits on> <start pos> <number of bits> <int to get bits from>\n", argv[0]);
 		exit(1);
 	}
 	printf("%d\n", setbits(atoi(argv[1]),atoi(argv[2]), atoi(argv[3]), atoi(argv[4])));

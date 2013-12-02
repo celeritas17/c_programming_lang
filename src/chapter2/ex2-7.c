@@ -5,7 +5,7 @@ unsigned int invert(const unsigned int, const int, const int);
 
 int main(int argc, char *argv[]){
 	if (argc < 4){
-		printf("Usage %s <int to invert bits on> <start pos> <number of bits>\n", argv[0]);
+		printf("Usage: %s <int to invert bits on> <start pos> <number of bits>\n", argv[0]);
 		exit(1);
 	}
 	printf("%d\n", invert(atoi(argv[1]), atoi(argv[2]), atoi(argv[3])));

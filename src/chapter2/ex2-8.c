@@ -6,7 +6,7 @@ unsigned int rightrot(const unsigned int, const int);
 
 int main(int argc, char *argv[]){
 	if (argc < 3){
-		printf("Usage %s <int to rotate> <number of bits to rotate>\n", argv[0]);
+		printf("Usage: %s <int to rotate> <number of bits to rotate>\n", argv[0]);
 		exit(1);
 	}
 	printf("%u\n", rightrot(atoi(argv[1]), atoi(argv[2])));
