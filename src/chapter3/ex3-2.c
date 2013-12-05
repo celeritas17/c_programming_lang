@@ -12,8 +12,8 @@ int main(int argc, char *argv[]){
 	return 0;
 }
 
-/*
-  */
+/* escape: copies t into s while converting escape characters in t
+   into visible escape sequences, like \n and \t */
 void escape(char *s, char *t){
 	int i, j;
 	for (i = 0, j = 0; s[i] != '\0' && t[j] != '\0'; i++, j++){
