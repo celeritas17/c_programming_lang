@@ -28,7 +28,7 @@ void escape(char *s, char *t){
 			default: s[i] = t[j]; break;
 		}
 	}
-	s[i] = '\0';
+	s[i] = '\0'; // terminate string
 }
 
 /* toescape: copies t into s while converting escape sequences, like 
@@ -45,10 +45,9 @@ void toescape(char *s, char *t){
 						default: s[i] = t[j]; break; 
 					}
 					
-				   }
-			
+				   }			
 			default: s[i] = t[j]; break;
 		}
 	}
-	s[i] = '\0';
+	s[i] = '\0'; // terminate string
 }
