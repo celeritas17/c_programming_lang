@@ -25,7 +25,7 @@ void escape(char *s, char *t){
 			case '\t': s[i++] = '\\', s[i] = 't'; break;
 			case '\n': s[i++] = '\\', s[i] = 'n'; break;
 			case '\r': s[i++] = '\\', s[i] = 'r'; break;
-			default: s[i] = t[j]; break;
+			default: s[i] = t[j]; break; // the 'break' here is unnecessary, but good defensive programming.
 		}
 	}
 	s[i] = '\0'; // terminate string
@@ -46,7 +46,7 @@ void toescape(char *s, char *t){
 					}
 					
 				   }			
-			default: s[i] = t[j]; break;
+			default: s[i] = t[j]; break; // the break here is unnecessary, but good defensive programming.
 		}
 	}
 	s[i] = '\0'; // terminate string
