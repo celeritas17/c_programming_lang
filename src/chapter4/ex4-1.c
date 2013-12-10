@@ -14,6 +14,9 @@ int main(int argc, char *argv[]){
 	return 0;
 }
 
+/* strrindex: return the index of the start of the rightmost 
+   occurrence of the string t in the string s, or -1 if t 
+   is not found in s. */
 int strrindex(char s[], char t[]){
 	int i, j, k;
 	
