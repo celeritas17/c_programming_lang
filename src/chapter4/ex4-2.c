@@ -7,6 +7,7 @@ double __atof(char s[]);
 int main(int argc, char *argv[]){
 	if (argc < 2){
 		printf("Usage: %s <string to convert to double>\n", argv[0]);
+		printf("***Accepts strings representing numbers in scientific notation.***\n");
 		exit(1);
 	}
 	printf("%f\n", __atof(argv[1]));
