@@ -288,7 +288,7 @@ void itob(int n, char s[], int b){
 }
 
 /* getline: get line into s, return length. From Section 4.1 in "C programming Language"; used in strrindex. */
-int getline(char s[], int lim){
+int _getline(char s[], int lim){
 
 	int c, i;
 
