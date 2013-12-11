@@ -13,7 +13,8 @@ int main(int argc, char *argv[]){
 	return 0;
 }
 
-/* atof: convert string s to double */
+/* atof: convert string s to double; accepts strings
+   representing digits in scientific notation. */
 double __atof(char s[]){
 	double val, power, e_power;
 	int i, j, exponent, sign, e_sign;
@@ -31,7 +32,6 @@ double __atof(char s[]){
 		val = 10.0*val + (s[i] - '0');
 		power *= 10.0;
 	}
-	
 	
 	if (s[i] == 'e' || s[i] == 'E')
 		i++;
