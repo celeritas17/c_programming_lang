@@ -79,13 +79,15 @@ double pop(void){
 
 /* print_top: print the element on the top of the stack */ 
 void print_top(void){
-	printf("%.8g\n", val[sp - 1]);
+	if (sp > 0)
+		printf("%.8g\n", val[sp - 1]);
 }
 
 /* duplicate_top: copies the element on the top of the stack
 /* and places it on top of the stack. */
 void duplicate_top(void){
-	val[sp++] = val[sp - 1];
+	if (sp > 0)
+		val[sp++] = val[sp - 1];
 }
 
 #include <ctype.h>
