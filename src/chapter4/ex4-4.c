@@ -77,6 +77,11 @@ double pop(void){
 	}
 }
 
+/*print_top: print the element on the top of the stack */ 
+void print_top(void){
+	printf("%.8g\n", sp - 1);
+}
+
 #include <ctype.h>
 
 int getch(void);
