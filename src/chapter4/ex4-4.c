@@ -100,6 +100,11 @@ void swap_top_two(void){
 	}
 }
 
+/* clear_stack: set sp to 0 (to clear the stack). */
+void clear_stack(void){
+	sp = 0;
+}
+
 #include <ctype.h>
 
 int getch(void);
