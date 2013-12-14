@@ -4,8 +4,9 @@
 /* Ryan Koven, 2012. All code from Ryan Koven unless otherwise noted. */
 
 
-#include<stdio.h>
+#include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define TABSTOP 5 /* The number of columns in a tab stop */
 
@@ -394,7 +395,7 @@ void print_top(void){
 }
 
 /* duplicate_top: copies the element on the top of the stack
-/* and places it on top of the stack. */
+   and places it on top of the stack. */
 void duplicate_top(void){
 	if (sp > 0)
 		val[sp++] = val[sp - 1];

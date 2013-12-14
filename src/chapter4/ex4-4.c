@@ -84,7 +84,7 @@ void print_top(void){
 }
 
 /* duplicate_top: copies the element on the top of the stack
-/* and places it on top of the stack. */
+   and places it on top of the stack. */
 void duplicate_top(void){
 	if (sp > 0)
 		val[sp++] = val[sp - 1];
