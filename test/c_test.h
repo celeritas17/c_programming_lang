@@ -364,4 +364,55 @@ double __atof(char s[]){
 	return sign*val*e_power/power;
 }
 
+#define MAXVAL 100   /* maximum depth of val stack */
+
+int sp = 0;          /* maximum free stack position */
+double val[MAXVAL];  /* value stack */
+
+/* push: push f onto value stack */
+void push(double f){
+	if (sp < MAXVAL)
+		val[sp++] = f;
+	else
+		printf("error: stack full, can't push %g\n", f);
+}
+
+/* pop: pop and return top value from stack */
+double pop(void){
+	if (sp > 0)
+		return val[--sp];
+	else{
+		printf("error: stack empty\n");
+		return 0.0;
+	}
+}
+
+/* print_top: print the element on the top of the stack */ 
+void print_top(void){
+	if (sp > 0)
+		printf("%.8g\n", val[sp - 1]);
+}
+
+/* duplicate_top: copies the element on the top of the stack
+/* and places it on top of the stack. */
+void duplicate_top(void){
+	if (sp > 0)
+		val[sp++] = val[sp - 1];
+}
+
+/* swap_top_two: swap the top two elements on the stack. */
+void swap_top_two(void){
+	if (sp > 1){
+		int temp;
+		temp = val[sp - 1]; // top of the stack
+		val[sp - 1] = val[sp - 2];
+		val[sp - 2] = temp;
+	}
+}
+
+/* clear_stack: set sp to 0 (to clear the stack). */
+void clear_stack(void){
+	sp = 0;
+}
+
 #endif
