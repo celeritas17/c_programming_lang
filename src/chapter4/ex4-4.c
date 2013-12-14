@@ -90,6 +90,16 @@ void duplicate_top(void){
 		val[sp++] = val[sp - 1];
 }
 
+/* swap_top_two: swap the top two elements on the stack. */
+void swap_top_two(void){
+	if (sp > 1){
+		int temp;
+		temp = val[sp - 1]; // top of the stack
+		val[sp - 1] = val[sp - 2];
+		val[sp - 2] = temp;
+	}
+}
+
 #include <ctype.h>
 
 int getch(void);
