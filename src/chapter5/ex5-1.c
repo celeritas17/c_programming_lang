@@ -24,5 +24,8 @@ int getint(int *pn){
 }
 
 int main(){
+	int *pn;
+	getint(pn);
+	printf("%d\n", *pn);
 	return 0;
 }
