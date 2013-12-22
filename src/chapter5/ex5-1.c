@@ -2,6 +2,15 @@
 #include <ctype.h>
 #include "ch4.h"
 
+int getint(int *);
+
+int main(){
+	int *pn;
+	getint(pn);
+	printf("%d\n", *pn);
+	return 0;
+}
+
 /*getint: get next integer from input into *pn */
 int getint(int *pn){
 	int c, sign;
@@ -21,11 +30,4 @@ int getint(int *pn){
 	if (c != EOF)
 		ungetch(c);
 	return c;
-}
-
-int main(){
-	int *pn;
-	getint(pn);
-	printf("%d\n", *pn);
-	return 0;
 }
