@@ -21,7 +21,7 @@ int getfloat(float *pn){
 
 	while (isspace(c = getch()))  /* skip white space */
 		;
-	if (!isdigit(c) && c != EOF && c != '+' && c != '-'){
+	if (!isdigit(c) && c != EOF && c != '+' && c != '-' && c != '.'){
 		ungetch(c);   /* it's not a number */
 		return 0;
 	}
