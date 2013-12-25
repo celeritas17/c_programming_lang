@@ -70,3 +70,11 @@ int getfloat(float *pn){
                 ungetch(c);
         return c;
 }
+
+/* copies the string t to the end of s */
+void __strcat(char *s, char *t){
+        while (*s)
+                s++;  /* move the pointer to the null terminator */
+        while ((*s++ = *t++)) 
+                ;        
+}
