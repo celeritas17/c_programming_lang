@@ -13,10 +13,10 @@ int main(int argc, char *argv[]){
 	return 0;
 }
 
-/* copies the string t to the end of s */
+/* __strcat: copies the string t to the end of string s */
 void __strcat(char *s, char *t){
 	while (*s)
 		s++;  /* move the pointer to the null terminator */
-	while ((*s++ = *t++)) 
+	while ((*s++ = *t++)) /* catenate */
 		;	
 }
