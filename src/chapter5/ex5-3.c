@@ -1,8 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void __strcat(char *, char *);
 
-int main(){
+int main(int argc, char *argv[]){
+	if (argc < 3){
+		printf("Usage: %s <orig string> <string to cat>\n", argv[0]);
+		exit(1);
+	}
+	__strcat(argv[1], argv[2]);
+	printf("%s\n", argv[1]);
 	return 0;
 }
 
