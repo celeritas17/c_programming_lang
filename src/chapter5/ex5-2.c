@@ -2,7 +2,7 @@
 #include <ctype.h>
 #include "ch4.h"
 
-float getfloat(float *);
+int getfloat(float *);
 
 int main(){
 	float *pn;
@@ -14,7 +14,7 @@ int main(){
 }
 
 /*getfloat: get next floating point number from input into *pn */
-float getfloat(float *pn){
+int getfloat(float *pn){
 	int c, sign;
 
 	while (isspace(c = getch()))  /* skip white space */
@@ -30,8 +30,13 @@ float getfloat(float *pn){
 			return 0;
 		}
 	}
-	for (*pn = 0; isdigit(c); c = getch())
+	for (*pn = 0; isdigit(c); c = getch()) /* get integer part */
 		*pn = 10 * *pn + (c - '0');
+	if (c == '.'){
+		while (isdigit(c = getch())){
+						
+		}
+	}
 	*pn *= sign;
 	if (c != EOF)
 		ungetch(c);
