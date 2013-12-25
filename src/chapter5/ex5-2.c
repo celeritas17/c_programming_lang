@@ -7,8 +7,8 @@ int getfloat(float *);
 int main(){
 	float *pn;
 	while(1){  /* Keep getting numbers from standard input forever */
-		getint(pn);
-		printf("%d\n", *pn);
+		getfloat(pn);
+		printf("%f\n", *pn);
 	}
 	return 0;
 }
@@ -16,6 +16,8 @@ int main(){
 /*getfloat: get next floating point number from input into *pn */
 int getfloat(float *pn){
 	int c, sign;
+	float power;
+	power = 1.0;
 
 	while (isspace(c = getch()))  /* skip white space */
 		;
@@ -30,14 +32,14 @@ int getfloat(float *pn){
 			return 0;
 		}
 	}
-	for (*pn = 0; isdigit(c); c = getch()) /* get integer part */
-		*pn = 10 * *pn + (c - '0');
-	if (c == '.'){
-		while (isdigit(c = getch())){
-						
-		}
+	for (*pn = 0.0; isdigit(c); c = getch()) /* get integer part */
+		*pn = 10.0 * *pn + (c - '0');
+	if (c == '.'){ /* get fraction part (if any) */
+		for (power = 1.0; isdigit(c = getch()); power *= 10.0){
+			*pn = 10 * *pn + (c - '0'); 	
+		}	
 	}
-	*pn *= sign;
+	*pn *= sign/power;
 	if (c != EOF)
 		ungetch(c);
 	return c;
