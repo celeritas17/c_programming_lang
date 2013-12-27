@@ -95,3 +95,11 @@ int strend(char *s, char *t){
                 return 1;
         return 0;
 }
+
+/* __strncpy: copy the first n characters of the string t to s */
+void __strncpy(char *s, char *t, int n){
+        int i;
+        for (i = 0; *t && i < n; s++, t++, i++)
+                *s = *t;
+        *s = '\0';
+}
