@@ -78,3 +78,20 @@ void __strcat(char *s, char *t){
         while ((*s++ = *t++))  /* catenate */
                 ;        
 }
+
+int strend(char *s, char *t){
+        int i, t_len, s_len;
+        s_len = strlen(s);
+        t_len = strlen(t);
+        
+        s += (s_len - 1);  /* Move to the end of s */
+        t += (t_len - 1);  /* Move to the end of t */
+
+        i = 0;
+        while (*s == *t && i < s_len && i < t_len){
+                s--, t--, i++;
+        }
+        if (i == t_len)
+                return 1;
+        return 0;
+}
