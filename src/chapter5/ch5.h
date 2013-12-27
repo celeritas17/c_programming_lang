@@ -103,3 +103,13 @@ void __strncpy(char *s, char *t, int n){
                 *s = *t;
         *s = '\0';
 }
+
+/* __strncat: catenate the string s with the first n characters of t */
+void __strncat(char *s, char *t, int n){
+        int i;
+        while (*s)
+                s++;  /* Move to the end of s */
+        for (i = 0; *t && i < n; s++, t++, i++)
+                *s = *t;
+        *s = '\0';
+}
