@@ -113,3 +113,18 @@ void __strncat(char *s, char *t, int n){
                 *s = *t;
         *s = '\0';
 }
+
+/* __strncmp: compares the first n characters of s with the first n
+  characters of t; returns 1 if they all match or all of t is found 
+  in s, 0 otherwise (the standard library function strncmp returns 
+  different values). */
+int __strncmp(char *s, char *t, int n){
+        int i;
+        
+        for (i = 0; *t && *s && *s == *t && i < n; i++, s++, t++)
+                ;
+        return ((i && i == n) || !*t); /* all n chars match
+                                          (n > 0) or all of 
+                                          t matches 
+                                         */
+}
