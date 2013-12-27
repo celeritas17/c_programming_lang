@@ -15,9 +15,11 @@ int main(int argc, char *argv[]){
 
 int strend(char *s, char *t){
 	int i, t_len, s_len;
-		
-	s += (s_len = strlen(s));  /* Move to the end of s */
-	t += (t_len = strlen(t));  /* Move to the end of t */
+	s_len = strlen(s);
+	t_len = strlen(t);
+	
+	s += (s_len - 1);  /* Move to the end of s */
+	t += (t_len - 1);  /* Move to the end of t */
 
 	i = 0;
 	while (*s == *t && i < s_len && i < t_len){
