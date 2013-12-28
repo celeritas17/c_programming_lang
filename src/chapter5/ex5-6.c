@@ -3,6 +3,8 @@
 #include <ctype.h>
 
 int __atoi(char *);
+char *__itoa(int);
+char *reverse(char *);
 
 int main(int argc, char *argv[]){
 	printf("%d\n", __atoi(argv[1]));
@@ -25,4 +27,14 @@ int __atoi(char *s){
 		number = 10*number + (*s - '0');
 
 	return sign*number;
+}
+
+
+
+/* __itoa: Returns the string representation of integer n. */
+char *__itoa(int n){
+	char *number;
+	number = (char *)malloc(10);
+	
+	return number;
 }
