@@ -12,7 +12,7 @@ int main(int argc, char *argv[]){
 /* __atoi: convert string to integer; return the integer represented 
    by string s, or 0 if s does not represent an int. */
 int __atoi(char *s){
-	int sign, number, power;
+	int sign, number;
 	
 	while (isspace(*s))
 		s++;   /* skip whitespace */
@@ -21,8 +21,8 @@ int __atoi(char *s){
 	sign = (*s == '-') ? -1 : 1;
 	if (!isdigit(*s)) 
 		s++;
-	for (number = 0, power = 1; isdigit(*s); power *= 10, s++) 
-		number = power*number + (*s - '0');
+	for (number = 0; isdigit(*s); s++) 
+		number = 10*number + (*s - '0');
 
 	return sign*number;
 }
