@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <string.h>
 
 int __atoi(char *);
 char *__itoa(int);
-char *reverse(char *);
+void reverse(char *);
 
 int main(int argc, char *argv[]){
-	printf("%d\n", __atoi(argv[1]));
+	//reverse(argv[1]);
+	printf("%s\n", reverse(argv[1]));
 	return 0;
 }
 
@@ -37,4 +39,14 @@ char *__itoa(int n){
 	number = (char *)malloc(10);
 	
 	return number;
+}
+
+void reverse(char *s){
+	char *end, *reversed, i;
+	reversed = (char *)malloc(strlen(s));
+	end = s + (i = strlen(s) - 1);
+	for (; i > 0; reversed++, end--, i--)
+		*reversed = *end;
+	*reversed = '\0';
+	return reversed - strlen(s);
 }
