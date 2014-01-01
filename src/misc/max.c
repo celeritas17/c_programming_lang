@@ -13,6 +13,7 @@ int main(int argc, char *argv[]){
 	return 0;
 }
 
+/* max: Return the maximum of two positive integers. */
 unsigned max(unsigned x, unsigned y){
 	unsigned i;
 	for (i = sizeof(int)*8 - 1; i > 0 && ((int)pow(2, i) & x) == ((int)pow(2, i) & y); i--)
