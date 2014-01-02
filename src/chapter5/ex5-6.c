@@ -9,7 +9,7 @@ void reverse(char *);
 
 int main(int argc, char *argv[]){
 	//reverse(argv[1]);
-	printf("%s\n", reverse(argv[1]));
+	//printf("%s\n", argv[1]);
 	return 0;
 }
 
@@ -42,11 +42,12 @@ char *__itoa(int n){
 }
 
 void reverse(char *s){
-	char *end, *reversed, i;
-	reversed = (char *)malloc(strlen(s));
-	end = s + (i = strlen(s) - 1);
-	for (; i > 0; reversed++, end--, i--)
-		*reversed = *end;
-	*reversed = '\0';
-	return reversed - strlen(s);
+	int i, j, temp;
+	for (i = 0, j = strlen(s) - 1; i < j; i++, j--){
+		temp = s[i];
+		s[i] = s[j];
+		s[j] = temp;
+	}
 }
+
+
